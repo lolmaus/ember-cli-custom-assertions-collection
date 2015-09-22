@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-No unreleased changes.
+### Documentation
+- Added Travis badge.
+- Formatting.
 
 ## [0.0.1] - 2015-09-22
 

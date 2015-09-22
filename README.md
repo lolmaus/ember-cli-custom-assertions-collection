@@ -1,3 +1,5 @@
+![travis](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection.svg)
+
 # ember-cli-custom-assertions-collection
 
 Turns out it's impossible to effectively use Chai in QUnit. Chai throws exceptions on failed Chai assertions, which are tracked by QUnit, though with a poor message. But Chai is unable to report successful assertions to QUnit. If you compose a QUnit test entirely from Chai assertions, QUnit will fail due to no assertions.
@@ -41,19 +43,19 @@ If you find it not working due to something of the above missing, try installing
 
 ## The assertions
 
-### `isFalse( obj[, message] )`
+#### `isFalse( obj[, message] )`
 
 Checks if `obj` is exactly `false`.
 
 
 
-### `arraysSameMembers( arr1, arr2, [, message] )`
+#### `arraysSameMembers( arr1, arr2, [, message] )`
 
 Checks if both arrays have identical content, in any order. Members are compared via `===`.
 
 
 
-### `arraysSameMembersOrdered( arr1, arr2, [, message] )`
+#### `arraysSameMembersOrdered( arr1, arr2, [, message] )`
 
 Checks if both arrays identical content, in identical order. Members are compared via `===`.
 
