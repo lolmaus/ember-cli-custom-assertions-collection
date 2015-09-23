@@ -1,4 +1,4 @@
-![travis](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection.svg)
+[![travis](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection.svg)](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection)
 
 # ember-cli-custom-assertions-collection
 
