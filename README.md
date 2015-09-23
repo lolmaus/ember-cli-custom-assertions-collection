@@ -1,4 +1,6 @@
-[![travis](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection.svg)](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection)
+[![Travis](https://img.shields.io/travis/lolmaus/ember-cli-custom-assertions-collection.svg?style=flat-square)](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection)
+[![npm](https://img.shields.io/npm/v/ember-cli-custom-assertions-collection.svg?style=flat-square)](https://www.npmjs.com/package/ember-cli-custom-assertions-collection)
+[![npm](https://img.shields.io/npm/dm/ember-cli-custom-assertions-collection.svg?style=flat-square)](https://www.npmjs.com/package/ember-cli-custom-assertions-collection)
 
 # ember-cli-custom-assertions-collection
 
