@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+No unreleased changes.
+
+
+
+## [0.2.2] - 2015-09-23
+
 ### Documentation
 - v0.2.0 marked as yanked.
+- Filled out repo and homepage fields in `package.json`.
 
 
 

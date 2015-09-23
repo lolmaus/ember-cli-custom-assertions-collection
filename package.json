@@ -11,7 +11,8 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "lolmaus/ember-cli-custom-assertions-collection",
+  "homepage": "https://github.com/lolmaus/ember-cli-custom-assertions-collection",
   "engines": {
     "node": ">= 0.10.0"
   },
