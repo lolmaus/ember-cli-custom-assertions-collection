@@ -43,21 +43,53 @@ If you find it not working due to something of the above missing, try installing
 
 ## The assertions
 
-#### `isFalse( obj[, message] )`
+#### `isFalse( obj [, message] )`
 
 Checks if `obj` is exactly `false`.
 
+```js
+assert.isFalse( false )   // pass
+assert.isFalse( 1 === 2 ) // pass
+assert.isFalse( null )    // fail
+```
 
 
-#### `arraysSameMembers( arr1, arr2, [, message] )`
+
+#### `arraysSameMembers( arr1, arr2 [, message] )`
 
 Checks if both arrays have identical content, in any order. Members are compared via `===`.
 
+```js
+assert.arraysSameMembers( ['foo', 'bar'], ['bar', 'foo'] ) // pass
+assert.arraysSameMembers( ['foo', 'bar'], ['bar', 'baz'] ) // fail
+assert.arraysSameMembers( ['foo', 'bar'], ['bar']        ) // fail
+```
 
-
-#### `arraysSameMembersOrdered( arr1, arr2, [, message] )`
+#### `arraysSameMembersOrdered( arr1, arr2 [, message] )`
 
 Checks if both arrays identical content, in identical order. Members are compared via `===`.
+
+```js
+assert.arraysSameMembersOrdered( ['foo', 'bar'], ['foo', 'bar'] ) // pass
+assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar', 'foo'] ) // fail
+assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar', 'baz'] ) // fail
+assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar']        ) // fail
+```
+
+
+#### `numbersAlmostEqual( number1, number2 [, message] )`
+
+You know how `1 - 0.9 === 0.1` is `false` in JS? That's because in JS float-point operations aren't precise.
+
+Use this to compare them loosely:
+
+```js
+assert.numbersAlmostEqual( 1 - 0.9, 1       ) // pass
+assert.numbersAlmostEqual( 1 - 1/3, 2/3     ) // pass
+assert.numbersAlmostEqual( 1,       0.00001 ) // fail
+```
+
+This assertion uses a method [suggested](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON#Testing_equality) by MDN. Not sure whether it'll work correctly every time.
 
 
 
