@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-No unreleased changes.
+### Documentation
+- v0.2.0 marked as yanked.
 
 
 
@@ -22,7 +23,7 @@ No unreleased changes.
 
 
 
-## [0.2.0] - 2015-09-23
+## [0.2.0] - 2015-09-23 [YANKED]
 
 ### Added
 - `numbersAlmostEqual`
