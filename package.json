@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-custom-assertions-collection",
   "version": "0.2.2",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An ever growing library of assertions for QUnit in Ember.",
   "directories": {
     "doc": "doc",
     "test": "tests"

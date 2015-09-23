@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+
+
+## [0.2.3] - 2015-09-23
+
 ### Documentation
 - Moar badges!
+- Filled in the description field in `package.json`.
 
 
 
