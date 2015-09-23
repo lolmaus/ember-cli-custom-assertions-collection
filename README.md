@@ -77,16 +77,17 @@ assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar']        ) // fail
 ```
 
 
-#### `numbersAlmostEqual( number1, number2 [, message] )`
+#### `numbersAlmostEqual( number1, number2 [, precision = 6] [, message] )`
 
 You know how `1 - 0.9 === 0.1` is `false` in JS? That's because in JS float-point operations aren't precise.
 
 Use this to compare them loosely:
 
 ```js
-assert.numbersAlmostEqual( 1 - 0.9, 1       ) // pass
-assert.numbersAlmostEqual( 1 - 1/3, 2/3     ) // pass
-assert.numbersAlmostEqual( 1,       0.00001 ) // fail
+assert.numbersAlmostEqual( 1 - 0.9, 1                     ) // pass
+assert.numbersAlmostEqual( 1 - 1/3, 2/3                   ) // pass
+assert.numbersAlmostEqual( 1,       0.00001               ) // fail
+assert.numbersAlmostEqual( 1,       0.00001, precision: 4 ) // pass
 ```
 
 This assertion uses a method [suggested](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON#Testing_equality) by MDN. Not sure whether it'll work correctly every time.

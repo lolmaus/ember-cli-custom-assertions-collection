@@ -8,6 +8,17 @@ No unreleased changes.
 
 
 
+## [0.2.1] - 2015-09-23
+
+### Changed
+- `numbersAlmostEqual` accepts an optional precision value, 6 by default
+
+### Refactored
+- Message generatino is extracted into a reusable helper
+
+
+
+
 ## [0.2.0] - 2015-09-23
 
 ### Added

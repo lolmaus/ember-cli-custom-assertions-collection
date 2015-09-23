@@ -1,4 +1,5 @@
 import _ from 'npm:lodash';
+import assertionMessage from '../helpers/assertion-message';
 
 export default function arraysSameMembers(context, actual, expected, message = "") {
 
@@ -6,7 +7,7 @@ export default function arraysSameMembers(context, actual, expected, message = "
     actual.length === expected.length
     && _.every(actual, (value) => _.contains(expected, value));
 
-  const finalMessage = `${message.length ? `${message}: ` : ''}Expected to have same members.`;
+  const finalMessage = assertionMessage("Expected to have same members.", message);
 
   this.push(result, actual, expected, finalMessage);
 }
