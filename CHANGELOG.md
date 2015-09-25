@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+No unreleased changes.
+
+
+
+## [0.3.0] - 2015-09-25
+
 ### Added
 - `arrayContains`
 
