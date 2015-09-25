@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-custom-assertions-collection",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "An ever growing library of assertions for QUnit in Ember.",
   "directories": {
     "doc": "doc",
