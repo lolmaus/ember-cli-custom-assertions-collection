@@ -46,7 +46,9 @@ If you find it not working due to something of the above missing, try installing
 
 ## The assertions
 
-#### `isFalse( obj [, message] )`
+#### isFalse
+
+    isFalse( obj [, message] )
 
 Checks if `obj` is exactly `false`.
 
@@ -57,7 +59,9 @@ assert.isFalse( null )    // fail
 ```
 
 
-### `arrayContains( arr, value [, message])`
+### arrayContains
+
+    arrayContains( arr, value [, message])
 
 Checks if array contains value
 
@@ -68,7 +72,9 @@ assert.arrayContains(['foo', 'bar'], 'quux') // fail
 
 
 
-#### `arraysSameMembers( arr1, arr2 [, message] )`
+#### arraysSameMembers
+
+    arraysSameMembers( arr1, arr2 [, message] )
 
 Checks if both arrays have identical content, in any order. Members are compared via `===`.
 
@@ -78,7 +84,9 @@ assert.arraysSameMembers( ['foo', 'bar'], ['bar', 'baz'] ) // fail
 assert.arraysSameMembers( ['foo', 'bar'], ['bar']        ) // fail
 ```
 
-#### `arraysSameMembersOrdered( arr1, arr2 [, message] )`
+#### arraysSameMembersOrdered
+
+arraysSameMembersOrdered( arr1, arr2 [, message] )
 
 Checks if both arrays identical content, in identical order. Members are compared via `===`.
 
@@ -90,7 +98,9 @@ assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar']        ) // fail
 ```
 
 
-#### `numbersAlmostEqual( number1, number2 [, precision = 6] [, message] )`
+#### numbersAlmostEqual
+
+    numbersAlmostEqual( number1, number2 [, precision = 6] [, message] )
 
 You know how `1 - 0.9 === 0.1` is `false` in JS? That's because in JS float-point operations aren't precise.
 

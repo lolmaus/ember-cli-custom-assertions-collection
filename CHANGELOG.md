@@ -4,12 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- `arrayContains`
+
+### Documentation
+- Assertion footprint formatting.
+
 
 
 ## [0.2.3] - 2015-09-23
-
-### Added
-- `arrayContains`
 
 ### Documentation
 - Moar badges!
