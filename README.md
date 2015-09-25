@@ -1,4 +1,4 @@
-[![Travis](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection.svg)](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection)
+[![Travis](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection.svg/)](https://travis-ci.org/lolmaus/ember-cli-custom-assertions-collection)
 [![npm](https://img.shields.io/npm/v/ember-cli-custom-assertions-collection.svg)](https://www.npmjs.com/package/ember-cli-custom-assertions-collection)
 [![npm](https://img.shields.io/npm/dm/ember-cli-custom-assertions-collection.svg)](https://www.npmjs.com/package/ember-cli-custom-assertions-collection)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-custom-assertions-collection.svg)](http://emberobserver.com/addons/ember-cli-custom-assertions-collection)
@@ -54,6 +54,16 @@ Checks if `obj` is exactly `false`.
 assert.isFalse( false )   // pass
 assert.isFalse( 1 === 2 ) // pass
 assert.isFalse( null )    // fail
+```
+
+
+### `arrayContains( arr, value [, message])`
+
+Checks if array contains value
+
+```js
+assert.arrayContains(['foo', 'bar'], 'bar')  // pass
+assert.arrayContains(['foo', 'bar'], 'quux') // fail
 ```
 
 
