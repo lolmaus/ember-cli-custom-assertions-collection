@@ -46,74 +46,93 @@ If you find it not working due to something of the above missing, try installing
 
 ## The assertions
 
-#### isFalse
+* #### isFalse
 
-    isFalse( obj [, message] )
+  ```
+  isFalse( obj [, message] )
+  ```
 
-Checks if `obj` is exactly `false`.
+  Checks if `obj` is exactly `false`.
 
-```js
-assert.isFalse( false )   // pass
-assert.isFalse( 1 === 2 ) // pass
-assert.isFalse( null )    // fail
-```
+  ```js
+  assert.isFalse( false )   // pass
+  assert.isFalse( 1 === 2 ) // pass
+  assert.isFalse( null )    // fail
+  ```
+
+* #### arrayContains
+
+  ```
+  arrayContains( arr, value [, message])
+  ```
+  
+  Checks if array contains value
+  
+  ```js
+  assert.arrayContains(['foo', 'bar'], 'bar')  // pass
+  assert.arrayContains(['foo', 'bar'], 'quux') // fail
+  ```
+
+* #### arraysSameMembers
+
+  ```
+  arraysSameMembers( arr1, arr2 [, message] )
+  ```
+  
+  Checks if both arrays have identical content, in any order.
+  
+  Members are compared via `===`, so it's safe to compare Ember models: will not crash due to circular references like `propEqual` does.
+  
+  ```js
+  assert.arraysSameMembers( ['foo', 'bar'], ['bar', 'foo'] ) // pass
+  assert.arraysSameMembers( ['foo', 'bar'], ['bar', 'baz'] ) // fail
+  assert.arraysSameMembers( ['foo', 'bar'], ['bar']        ) // fail
+  ```
+  
+
+* #### arraysSameMembersOrdered
+
+  ```
+  arraysSameMembersOrdered( arr1, arr2 [, message] )
+  ```
+  
+  Checks if both arrays identical content, in identical order. Members are compared via `===`.
+  
+  ```js
+  assert.arraysSameMembersOrdered( ['foo', 'bar'], ['foo', 'bar'] ) // pass
+  assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar', 'foo'] ) // fail
+  assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar', 'baz'] ) // fail
+  assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar']        ) // fail
+  ```
 
 
-### arrayContains
+* #### numbersAlmostEqual
 
-    arrayContains( arr, value [, message])
-
-Checks if array contains value
-
-```js
-assert.arrayContains(['foo', 'bar'], 'bar')  // pass
-assert.arrayContains(['foo', 'bar'], 'quux') // fail
-```
-
-
-
-#### arraysSameMembers
-
-    arraysSameMembers( arr1, arr2 [, message] )
-
-Checks if both arrays have identical content, in any order. Members are compared via `===`.
-
-```js
-assert.arraysSameMembers( ['foo', 'bar'], ['bar', 'foo'] ) // pass
-assert.arraysSameMembers( ['foo', 'bar'], ['bar', 'baz'] ) // fail
-assert.arraysSameMembers( ['foo', 'bar'], ['bar']        ) // fail
-```
-
-#### arraysSameMembersOrdered
-
-arraysSameMembersOrdered( arr1, arr2 [, message] )
-
-Checks if both arrays identical content, in identical order. Members are compared via `===`.
-
-```js
-assert.arraysSameMembersOrdered( ['foo', 'bar'], ['foo', 'bar'] ) // pass
-assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar', 'foo'] ) // fail
-assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar', 'baz'] ) // fail
-assert.arraysSameMembersOrdered( ['foo', 'bar'], ['bar']        ) // fail
-```
+  ```
+  numbersAlmostEqual( number1, number2 [, precision = 6] [, message] )
+  ```
+  
+  You know how `1 - 0.9 === 0.1` is `false` in JS? That's because in JS float-point operations aren't precise.
+  
+  Use this to compare them loosely:
+  
+  ```js
+  assert.numbersAlmostEqual( 1 - 0.9, 1                     ) // pass
+  assert.numbersAlmostEqual( 1 - 1/3, 2/3                   ) // pass
+  assert.numbersAlmostEqual( 1,       0.00001               ) // fail
+  assert.numbersAlmostEqual( 1,       0.00001, precision: 4 ) // pass
+  ```
+  
+  This assertion uses a method [suggested](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON#Testing_equality) by MDN. Not sure whether it'll work correctly every time.
 
 
-#### numbersAlmostEqual
+* #### largerThan, largerThanOrEqual, smallerThan, smallerThanOrEqual
 
-    numbersAlmostEqual( number1, number2 [, precision = 6] [, message] )
-
-You know how `1 - 0.9 === 0.1` is `false` in JS? That's because in JS float-point operations aren't precise.
-
-Use this to compare them loosely:
-
-```js
-assert.numbersAlmostEqual( 1 - 0.9, 1                     ) // pass
-assert.numbersAlmostEqual( 1 - 1/3, 2/3                   ) // pass
-assert.numbersAlmostEqual( 1,       0.00001               ) // fail
-assert.numbersAlmostEqual( 1,       0.00001, precision: 4 ) // pass
-```
-
-This assertion uses a method [suggested](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON#Testing_equality) by MDN. Not sure whether it'll work correctly every time.
+  ```
+  largerThan(arg1, arg2 [, message])
+  ```
+  
+  Compares the two arguments using `>`, `>=`, `<` and `<=` respectively.
 
 
 

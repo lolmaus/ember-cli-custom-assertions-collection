@@ -8,6 +8,18 @@ No unreleased changes.
 
 
 
+## [0.4.0] - 2015-09-29
+
+### Added
+- `largerThan`, `largerThanOrEqual`, `smallerThan`, `smallerThanOrEqual`
+
+### Documentation
+- Adjusted assertions formatting.
+- Added a note that `arraysSameMembers` is safe to compare Ember models.
+
+
+
+
 ## [0.3.0] - 2015-09-25
 
 ### Added
