@@ -42,7 +42,7 @@ const testCases = [
   {arg1: "foo bar baz",  arg2: "foobar quux",      result: false}
 ];
 
-QUnit.test('it works', function(assert) {
+test('it works', function(assert) {
   testCases.forEach((testCase, i) => {
     const obj = {};
     const testName = `${i}: ${testCase.arg1}, ${testCase.arg2}`;
