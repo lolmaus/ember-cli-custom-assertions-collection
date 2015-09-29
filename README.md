@@ -152,6 +152,22 @@ If you find it not working due to something of the above missing, try installing
   ```js
   assert.datesEqual( new Date('2015-01-01'), new Date('2015-01-01') ) // pass
   ```
+
+
+* #### stringsEqualNoWhitespace
+
+  ```
+  stringsEqualNoWhitespace(str1, str2 [, message])
+  ```
+  
+  Compares strings with all whitespace removed.
+  
+  Useful for comparing `jQuery().text()`.
+  
+  ```js
+  const html = "<div> <div>Foo</div> <div>Bar</div> </div>";
+  assert.datesEqual( $(element).text(), "FooBar" ) // pass
+  ```
   
 
 

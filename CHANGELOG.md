@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 
+
+## [0.6.0] - 2015-09-29
+
+### Added
+- `stringsEqualNoWhitespace`
+
+
+
 ## [0.5.0] - 2015-09-29
 
 ### Added
