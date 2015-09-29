@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-No unreleased changes.
+### Documentation
+- Fixed Travis badge image URL.
 
 
 
