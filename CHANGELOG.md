@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+
+## [0.5.0] - 2015-09-29
+
+### Added
+- `datesEqual`
+
 ### Documentation
 - Fixed Travis badge image URL.
+- Added code sample for 'smallerThan'.
 
 
 

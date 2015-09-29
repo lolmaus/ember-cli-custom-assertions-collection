@@ -133,6 +133,26 @@ If you find it not working due to something of the above missing, try installing
   ```
   
   Compares the two arguments using `>`, `>=`, `<` and `<=` respectively.
+  
+  ```js
+  assert.smallerThan( 1, 2 ) // pass
+  ```
+
+
+* #### datesEqual
+
+  ```
+  datesEqual(date1, date2 [, message])
+  ```
+  
+  So dates are objects and two distinct objects aren't equal even if they represent identical dates.
+  
+  This assertion compares the two dates by [converting them to unix timestamp integers and comparing those](http://stackoverflow.com/a/15470428/901944).
+  
+  ```js
+  assert.datesEqual( new Date('2015-01-01'), new Date('2015-01-01') ) // pass
+  ```
+  
 
 
 
