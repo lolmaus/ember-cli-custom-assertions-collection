@@ -1,5 +1,5 @@
 {
-  "name": "exam-sim-ember",
+  "name": "ember-cli-custom-assertions-collection",
   "root": "./dist",
   "clean_urls": true,
   "routes": {

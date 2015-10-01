@@ -11,6 +11,7 @@
 # misc
 /.sass-cache/
 /.divshot-cache/
+/divshot-debug.log
 /connect.lock
 /coverage/*
 /libpeerconnection.log
