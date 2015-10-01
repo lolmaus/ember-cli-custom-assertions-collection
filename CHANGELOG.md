@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-No unreleased changes.
+### Documentation
+- Added DivShot config.
 
 
 ## [1.0.0] - 2015-10-01

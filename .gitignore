@@ -9,7 +9,8 @@
 /bower_components
 
 # misc
-/.sass-cache
+/.sass-cache/
+/.divshot-cache/
 /connect.lock
 /coverage/*
 /libpeerconnection.log
