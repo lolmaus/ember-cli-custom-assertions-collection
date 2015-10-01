@@ -477,9 +477,9 @@ TBD.
 
 If this thing catches up, we could document it with YUIDOC.
 
-All suggestion are welcome in issues and in [Ember Slack community](https://ember-community-slackin.herokuapp.com/).
+Any suggestion are welcome in [issues](https://github.com/lolmaus/ember-cli-custom-assertions-collection/issues) and in [Ember Slack community](https://ember-community-slackin.herokuapp.com/). Don't be shy!
 
-Oh, and don't forget to star the addon on Github! :beers"
+Oh, and don't forget to star the addon on Github! :beers:
 
 
 
