@@ -1,5 +1,6 @@
 import { test } from 'qunit';
-import sinon from 'sinon';
+import sinon    from 'sinon';
+import _        from 'npm:lodash';
 
 export default function testAssertion (testCases, asserter, assertionPusher, message, appContext) {
   testCases.forEach((testCase) => {
@@ -20,7 +21,13 @@ export default function testAssertion (testCases, asserter, assertionPusher, mes
       const firstArg  = appContext ? testCase.args[1] : testCase.args[0];
       const secondArg = appContext ? testCase.args[2] : testCase.args[1];
 
-      assertionPusher.call(obj, appContext, ...testCase.args);
+      // Padding the args array using the testCase.argsLength value
+      let args = [].concat(testCase.args);
+      if (testCase.argsLength) {
+        args = _.merge( Array.apply(null, Array(testCase.argsLength)), args );
+      }
+
+      assertionPusher.call(obj, appContext, ...args);
 
       sinon.assert.calledOnce(spy);
       sinon.assert.calledWithExactly(spy, testCase.result, firstArg, secondArg, message);
@@ -36,7 +43,7 @@ export default function testAssertion (testCases, asserter, assertionPusher, mes
       // Testing assertion pusher, with user message
 
       spy = obj.push = sinon.spy();
-      assertionPusher.call(obj, appContext, ...testCase.args, 'Foo');
+      assertionPusher.call(obj, appContext, ...args, 'Foo');
 
       sinon.assert.calledOnce(spy);
       sinon.assert.calledWithExactly(spy, testCase.result, firstArg, secondArg, `Foo: ${message}`);

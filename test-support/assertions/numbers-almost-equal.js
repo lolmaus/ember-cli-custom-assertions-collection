@@ -2,11 +2,6 @@ import _ from 'npm:lodash';
 import pushAssertion from '../helpers/push-assertion';
 
 export function testNumbersAlmostEqual(actual, expected, precision) {
-
-  if (_.isString(precision)) {
-    message = precision;
-  }
-
   if (!_.isNumber(precision)) {
     precision = 6;
   }

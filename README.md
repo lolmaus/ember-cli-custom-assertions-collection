@@ -380,9 +380,10 @@ It accepts the following arguments:
 
 ```
 {
-   args: [ 'foo', 'bar', 'baz' ], // (array) arguments that will be passed into the testing callback
-   result: true,                     // (boolean) what result to expect
-   desc:   "testing three strings"   // (string, optional) Lets similar-looking test cases appear different in test results
+   args:       [ 'foo', 'bar', 'baz' ], // (array) arguments that will be passed into the testing callback
+   result:     true,                    // (boolean) what result to expect
+   desc:       "testing three strings", // (string, optional) Lets similar-looking test cases appear different in test results
+   argsLength: 4                        // (int, optional) To test optional arguments
 }
 ```
 
@@ -403,6 +404,10 @@ Note that if you pass `appContext`, then it will be passed as the first argument
 ```js
 { args: [ application, 'foo', 'bar', 'baz' ], result: true }
 ```
+
+If your test callback has optional argument(s) and in your test case `args` contains fewer arguments that the callback's footprint, then you have to provide `argsLength` with a total number of arguments. See the 
+`numbers-almost-equal` [assertion](https://github.com/lolmaus/ember-cli-custom-assertions-collection/blob/generation-2/test-support/assertions/numbers-almost-equal.js#L5-L7) and [test](https://github.com/lolmaus/ember-cli-custom-assertions-collection/blob/generation-2/tests/unit/assertions/numbers-almost-equal-test.js#L22-23) for an example.
+
 
 #### Testing a trivial assertion that does not have a testing callback exposed
 
