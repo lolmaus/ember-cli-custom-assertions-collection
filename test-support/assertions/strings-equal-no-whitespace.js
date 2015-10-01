@@ -1,15 +1,14 @@
-import _ from 'npm:lodash';
-import assertionMessage from '../helpers/assertion-message';
+import pushAssertion from '../helpers/push-assertion';
 
-export function parse(str) {
+export function removeWhitespace(str) {
   return str.replace(/\s+/g, '').trim()
 }
 
-export default function stringsEqualNoWhitespace(context, arg1, arg2, message = "") {
-
-  const result       = parse(arg1) === parse(arg2);
-  const finalMessage = assertionMessage('Expected strings to be equal, whitespace not taken into account.', message);
-
-  this.push(result, arg1, arg2, finalMessage);
-
+export function testStringsEqualNoWhitespace(str1, str2) {
+  return removeWhitespace(str1) === removeWhitespace(str2);
 }
+
+export default pushAssertion(
+  testStringsEqualNoWhitespace,
+  'Expected strings to be equal, whitespace not taken into account.'
+)

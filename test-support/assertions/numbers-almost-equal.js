@@ -1,7 +1,7 @@
 import _ from 'npm:lodash';
-import assertionMessage from '../helpers/assertion-message';
+import pushAssertion from '../helpers/push-assertion';
 
-export default function numbersAlmostEqual(context, actual, expected, precision, message = "") {
+export function testNumbersAlmostEqual(actual, expected, precision) {
 
   if (_.isString(precision)) {
     message = precision;
@@ -11,9 +11,10 @@ export default function numbersAlmostEqual(context, actual, expected, precision,
     precision = 6;
   }
 
-  const result       = Math.abs(actual - expected) <= (1 /  Math.pow(10, precision));
-  const finalMessage = assertionMessage('Expected to be almost equal.', message);
-
-  this.push(result, actual, expected, finalMessage);
-
+  return Math.abs(actual - expected) <= (1 /  Math.pow(10, precision));
 }
+
+export default pushAssertion(
+  testNumbersAlmostEqual,
+  "Expected numbers to be almost equal."
+)

@@ -1,7 +1,6 @@
-import assertionMessage from '../helpers/assertion-message';
+import pushAssertion from '../helpers/push-assertion';
 
-export default function isFalse(context, testee, message = "") {
-  const result       = testee === false;
-  const finalMessage = assertionMessage("Expected to be false.", message);
-  this.push(result, testee, false, finalMessage);
-}
+export default pushAssertion(
+  (testee) => testee === false,
+  "Expected to be false."
+)

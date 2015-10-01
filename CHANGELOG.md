@@ -4,6 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+No unreleased changes.
+
+
+## [1.0.0] - 2015-10-01
+
+Woot! A stable release!
+
+No new functionality, but the code has been severely refractored.
+
+All boilerplate code in assertion definitions and assertion tests has been moved to helpers.
+
+It is now very easy to add new assertions and test them. Chime in!
 
 
 ## [0.6.0] - 2015-09-29

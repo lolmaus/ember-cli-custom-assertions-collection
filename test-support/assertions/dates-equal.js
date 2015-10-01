@@ -1,11 +1,10 @@
-import _ from 'npm:lodash';
-import assertionMessage from '../helpers/assertion-message';
+import pushAssertion from '../helpers/push-assertion';
 
-export default function datesEqual(context, arg1, arg2, message = "") {
-
-  const result       = arg1.getTime() === arg2.getTime();
-  const finalMessage = assertionMessage('Expected dates to be equal.', message);
-
-  this.push(result, arg1, arg2, finalMessage);
-
+export function testDatesEqual(date1, date2) {
+  return date1.getTime() === date2.getTime();
 }
+
+export default pushAssertion (
+  testDatesEqual,
+  'Expected dates to be equal.'
+)
