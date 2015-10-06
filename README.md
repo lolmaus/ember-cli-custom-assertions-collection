@@ -7,13 +7,17 @@
 
 **An ever growing library of assertions for QUnit in Ember**
 
-Turns out it's impossible to effectively use Chai in QUnit. Chai throws exceptions on failed Chai assertions, which are tracked by QUnit, though with a poor message. But Chai is unable to report successful assertions to QUnit. If you compose a QUnit test entirely from Chai assertions, QUnit will fail due to no assertions.
+Turns out it's impossible to effectively use Chai in QUnit! :(
+
+Chai is only able to throw exceptions on failed Chai assertions. Those exceptions will fail QUnit tests with poor messages. But Chai is unable to report successful assertions to QUnit. If you compose a QUnit test entirely from Chai assertions, QUnit will fail due to no assertions.
 
 This is really unfortunate because Chai has a decent assertions library, and QUnit's library is very basic and often not enough.
 
-This Ember addon aims to provide missing assertions and many more.
+This Ember addon aims to provide a rich collection of assertions that let you stop longing for Chai.
 
-Assertions themselves are properly unit-tested.
+Assertions themselves are [properly unit-tested](http://ember-cli-custom-assertions-collection.divshot.io/tests/?nocontainer).
+
+:sparkles:**New in v1.0.0!**:sparkles: Creating new assertions and testing them is now effortless. See the [Contributing](#contributing) section.
 
 
 ## Work in progress
